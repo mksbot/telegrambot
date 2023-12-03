@@ -17,8 +17,9 @@ print(cor[0], f'{" " * 20}EXTRAIR MIDIAS DO TELEGRAM{" " * 20}', r[2], r[0], '\n
 try:
     client2 = arquivos_texto.abrir_reg(f'continuar_client')
     if '2' in client2:
-        api_id2 = 24941592
-        api_hash2 = '02bcab46b7f4acc54248484d6df31811'
+        if '2' in client2:
+        api_id2 = 22337626
+        api_hash2 = '786f121c447f7a84b3ae51dd60384e33'
         sessao = 'upalto2'
         client2 = TelegramClient(sessao, api_id2, api_hash2)
     else:
@@ -198,7 +199,7 @@ async def main():
                     print(f'{cor[2]}Enviando{r[2]}')
 
                     try:
-                        tempo = randint(0, 25)
+                        tempo = randint(0, 100)
                         for ani2 in tqdm(range(0, tempo)):
                             sleep(1)
                         await client2.send_file(meu_grupo_nome, m[-(quantia_agrup + 1):-1], file_size=100, silent=True)
